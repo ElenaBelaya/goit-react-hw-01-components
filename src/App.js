@@ -2,8 +2,9 @@ import Profile from './components/Profile';
 import user from './user.json';
 
 export default function App () {
-    return 
-    <div>
+    return (
+      <div className="App">
+    
         <Profile
         username={user.username}
         tag={user.tag}
@@ -11,5 +12,8 @@ export default function App () {
         avatar={user.avatar}
         stats={user.stats}
       />
+    
     </div>
+    )
+    
 }

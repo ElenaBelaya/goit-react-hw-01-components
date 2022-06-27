@@ -1,0 +1,21 @@
+.profile {
+    text-align: center;
+}
+
+.avatar {
+    width: 150px;
+    height: 250px;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    align-items: center;
+
+}
+
+.label, 
+quantity {
+    display: block;
+}

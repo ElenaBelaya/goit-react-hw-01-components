@@ -1,5 +1,6 @@
-import Profile from './components/Profile';
+import Profile from './components/profile/Profile';
 import user from './user.json';
+import styles from './components/profile/profile.css';
 
 export default function App () {
     return (

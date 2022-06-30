@@ -1,25 +1,19 @@
-export default function Statistics ({ label, percentage, id }) {
+import StatEl from './statEl';
+
+export default function Statistics ({ title, stats }) {
     return (
     <section className="statistics">
-    <h2 className="title">Upload stats</h2>
+    <h2 className="title">{title}</h2>
   
     <ul className="stat-list">
-      <li className="item" >
-        <span className="label">{label}</span>
-        <span className="percentage">{percentage}%</span>
-      </li>
-      <li className="item" >
-        <span className="label">{label}</span>
-        <span className="percentage">{percentage}%</span>
-      </li>
-      <li className="item">
-        <span className="label">{label}</span>
-        <span className="percentage">{percentage}%</span>
-      </li>
-      <li className="item">
-        <span className="label">{label}</span>
-        <span className="percentage">{percentage}%</span>
-      </li>
+      {stats.map(stat => (
+        <StatEl
+        id={stat.id}
+        label={stat.label}
+        percentage={stat.percentage}
+        />
+      ))}
+     
     </ul>
   </section>
   )

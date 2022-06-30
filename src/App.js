@@ -17,10 +17,9 @@ export default function App () {
         stats={user.stats}
       />       
         <Statistics 
-        id={data.id}           
-        label={data.label}
-        percentage={data.percentage} /> 
-
+        title="Upload stats" 
+        stats={data} 
+        />
       <FriendList items={friends}/>
     </div>
     )

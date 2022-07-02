@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
+import { StatItem, StatUnit } from './statEl.styled';
+import { getRandomHexColor } from '../../color';
 export default function StatEl ({ label, percentage, id }) {
     return (
    
-      <li className="item">
-        <span className="label">{label}</span>
-        <span className="percentage">{percentage}%</span>
-      </li>
-     
+      <StatItem color = { getRandomHexColor() } >
+   <span className="label">{label}</span>
+   <StatUnit>{percentage}%</StatUnit>
+      </StatItem>   
    
   )
 }

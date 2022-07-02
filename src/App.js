@@ -7,39 +7,35 @@ import friends from './friends.json';
 import TransactionHistory from './components/transactionHistory/TransactionHistory';
 import transactions from './transactions.json';
 import { Container } from 'components/profile/profile.styled';
-import { ProfileBox } from './components/profile/profile.styled';
+
 
 
 export default function App () {
     return (
       <div className="App"> 
       <Container>
-      <ProfileBox>
-        <Profile
+       <Profile
         username={user.username}
         tag={user.tag}
         location={user.location}
         avatar={user.avatar}
         stats={user.stats}
         /> 
-      </ProfileBox> 
       <FriendList friends={friends}/>               
-      </Container> 
-
-        
-       
+      </Container>         
+      <Container>
         <Statistics 
         title="Upload stats" 
         stats={data} 
         />
         <Statistics 
         stats={data} />
-        
-      
-      
-      <TransactionHistory
+       </Container>
+       <Container>
+       <TransactionHistory
       items={transactions}
       />
+      </Container>      
     </div>
     )
     

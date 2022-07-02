@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
-import { FriendItem } from '../friend/friend.styled';
+import { FriendItem, FriendStatus, FriendName } from '../friend/friend.styled';
 export default function Friend({ avatar, name, isOnline, id }) {
   return (
     <FriendItem>
- <span className="status">{isOnline}</span>
+ <FriendStatus status={isOnline}>•{isOnline}</FriendStatus>
   <img className="avatar" src={avatar} alt="User avatar" width="48" />
-  <p className="name">{name}</p>
+  <FriendName>{name}</FriendName>
     </FriendItem>
  
   )

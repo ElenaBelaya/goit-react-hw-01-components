@@ -1,31 +1,46 @@
+import PropTypes from 'prop-types';
+import { Image, BoxList, Span } from "./profile.styled";
+
 export default function Profile( { username, tag, location, avatar, stats }) {
     return (
         <div className="profile">
   <div className="description">
-    <img
+   
+      <Image     
       src={avatar}
       alt="User avatar"
-      className="avatar"
-    />
+      className="avatar"   /> 
+    
+    
     <p className="name">{username}</p>
     <p className="tag">@{tag}</p>
     <p className="location">{location}</p>
   </div>
-
-  <ul className="stats">
+<BoxList>
     <li>
-      <span className="label">Followers</span>
-      <span className="quantity">{stats.followers}</span>
+      <Span>Followers</Span>
+      <Span>{stats.followers}</Span>
     </li>
     <li>
-      <span className="label">Views</span>
-      <span className="quantity">{stats.views}</span>
+       <Span> Views</Span>
+       <Span>{stats.views}</Span>
     </li>
     <li>
-      <span className="label">Likes</span>
-      <span className="quantity">{stats.likes}</span>
-    </li>
-  </ul>
+       <Span>Likes</Span>
+       <Span>{stats.likes}</Span>
+    </li> 
+</BoxList>
+ 
 </div>
     )
+}
+
+Profile.propTypes = {
+  username: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,  
+  stats: PropTypes.objectOf(PropTypes.number).isRequired,
+  
+  
 }

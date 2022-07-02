@@ -1,9 +1,11 @@
 import styled from '@emotion/styled';
 
 export const FriendBox = styled.ul`
-position: absolute;
-top: 50px;
-right: 50px;
+display: flex;
+flex-direction: column;
+width: 50%;
+margin: 0px;
+padding: 0px;
 
 list-style-type: none;
 
